@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เว็บสุ่มสล็อต</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #222;
+            color: white;
+        }
+        .slot {
+            font-size: 50px;
+            margin: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎰 เว็บสุ่มสล็อต 🎰</h1>
+    <div class="slot" id="slot1">🍎</div>
+    <div class="slot" id="slot2">🍒</div>
+    <div class="slot" id="slot3">🍋</div>
+    <button onclick="spinSlot()">🎲 หมุนสล็อต!</button>
+    <h2 id="result"></h2>
+
+    <script>
+        function spinSlot() {
+            let icons = ["🍎", "🍒", "🍋", "🍊", "🍉", "⭐"];
+            let slot1 = icons[Math.floor(Math.random() * icons.length)];
+            let slot2 = icons[Math.floor(Math.random() * icons.length)];
+            let slot3 = icons[Math.floor(Math.random() * icons.length)];
+            
+            document.getElementById("slot1").innerText = slot1;
+            document.getElementById("slot2").innerText = slot2;
+            document.getElementById("slot3").innerText = slot3;
+
+            if (slot1 === slot2 && slot2 === slot3) {
+                document.getElementById("result").innerText = "🎉 แจ็คพอต! คุณชนะแล้ว! 🎉";
+            } else {
+                document.getElementById("result").innerText = "ลองใหม่อีกครั้ง!";
+            }
+        }
+    </script>
+</body>
+</html>
